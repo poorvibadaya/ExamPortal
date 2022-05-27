@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Login Page</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Courier New', Courier, monospace;
+           
+        }
+        
+        #container
+        {
+            /* background-image: linear-gradient(to bottom right,rgb(255, 0, 43),rgb(61, 1, 56)); */
+            background-color: white;
+            height:570px;
+            width: 100%;
+            /* height:max-content;
+            width: max-content; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center ;
+            align-content: center;
+        }
+       #box
+       {
+           background-color: white;
+           height: 500px;
+           width: 800px;
+           border-radius: 25px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-content: center;
+       }
+       #logo
+       {
+           height: 250px;
+           width: 200px;
+           background-color: tomato;
+       }
+       #login
+       {
+        height: 250px;
+           width: 400px;
+           /* background-color:rgb(204, 204, 231); */
+       }
+       img
+       {
+           height: 250px;
+           width: 250px;
+       }
+       #but
+        {
+            position: relative;
+            height: 35px;
+            width: 250px;
+            border-radius: 20px;
+           
+
+            /* position: relative; */
+            /* height: 50px;
+            width: 120px; */
+            /* border-radius: 6px;
+            margin-right: 100px; */
+            background-color: #4285F4;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #login
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        input#admin
+        {
+            background-image: url(646135.png);
+            background-position:15px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+          /* padding-left:25px; */
+        }
+        input#pass
+        {
+            background-image: url(3064155.png);
+            background-position:15px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+          /* padding-left:25px; */
+        }
+        input[type= submit]{
+          /* font-family: 'Helvetica', serif; */
+          font-size: 1.17em;
+          background-color: transparent;
+          border: none;
+          color: white;
+          /* padding: 16px 32px; */
+          /* margin: 4px 2px; */
+          border-radius: 10px;
+          /* border-top: none; */
+        }
+        .con
+        {
+            height: 35px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            border:none;
+            outline: none;
+            margin: 1px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        @media (min-width:768px) and (max-width:1024px)
+        {
+            #box
+       {
+           background-color: white;
+           height:520px;
+           width: 500px;
+           border-radius: 25px;
+           box-shadow: 10px 10px 10px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #but
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: #4285F4;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #login
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #logo
+       {
+           height: 250px;
+           width: 200px;
+           background-color: tomato;
+       }
+       img
+       {
+           height: 250px;
+           width: 250px;
+       }
+        }
+        @media (min-width:425px) and (max-width:768px)
+        {
+            #box
+       {
+           background-color: white;
+           height:400px;
+           width: 480px;
+           border-radius: 25px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #but
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: #4285F4;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #login
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #logo
+       {
+           height: 120px;
+           width: 120px;
+           background-color: tomato;
+       }
+       img
+       {
+           height: 120px;
+           width: 120px;
+       }
+        }
+        @media (min-width:375px) and (max-width:425px)
+        {
+            #box
+       {
+           background-color: white;
+           height:350px;
+           width: 300px;
+           border-radius: 25px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #but
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: #4285F4;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #login
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #logo
+       {
+           height: 80px;
+           width: 80px;
+           background-color: tomato;
+       }
+       img
+       {
+           height: 80px;
+           width: 80px;
+       }
+        }
+        @media (min-width:320px) and (max-width:375px)
+        {
+            #box
+       {
+           background-color: white;
+           height:300px;
+           width: 300px;
+           border-radius: 25px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #but
+        {
+            /* position: relative; */
+            height: 35px;
+            width: 250px;
+            border-radius: 20px;
+           
+
+           
+            background-color: #4285F4;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            /* position: relative; */
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #login
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #logo
+       {
+           height: 50px;
+           width: 30px;
+           /* background-color: tomato; */
+       }
+       img
+       {
+           height: 50px;
+           width: 50px;
+       }
+       .con
+        {
+            height: 35px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            border:none;
+            outline: none;
+        }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="box">
+            
+            <div id="login">
+              <div id="compo1"> <h3 style="font-family: 'Courier New', Courier, monospace ; text-align: center;">Sign Up</h2> </div>
+              <br>
+              <form action="/sign_up" method="POST">
+              <div id="compo2"> <input type="text" class="con" id="name" name="name" placeholder="Name" required  style="font-family: 'Courier New', Courier, monospace; padding-left: 50px;font-weight: bold;"></div>
+              <div id="compo3"> <input type="text" class="con" id="email" name="email" placeholder="Email"  required style="font-family: 'Courier New', Courier, monospace; padding-left: 50px; font-weight: bold;"></div>
+              <div id="compo3"> <input type="text" class="con" id="phno" name="phno" placeholder="Mobile Number"  required style="font-family: 'Courier New', Courier, monospace; padding-left: 50px; font-weight: bold;"></div>
+              
+              <div id="compo3"> <input type="password" id="pass" class="con" placeholder="Date Of Birth" required style="font-family: 'Courier New', Courier, monospace; padding-left: 50px; font-weight: bold;"></div>
+              <br>
+              <div id="compo4"><button id="but"><input type="submit" value="SUBMIT" id="submit" /></button></div>
+
+            </form>
+              </h5></div></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
