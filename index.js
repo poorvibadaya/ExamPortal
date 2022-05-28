@@ -11,7 +11,7 @@ app.use(
     extended: true,
   })
 );
-
+//image storage in disk
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-
+//connection of all the database used
 var conn = mongoose.createConnection("mongodb://localhost:27017/testA");
 var conn2 = mongoose.createConnection("mongodb://localhost:27017/testB");
 var conn3 = mongoose.createConnection("mongodb://localhost:27017/testC");
@@ -52,6 +52,8 @@ var ModelC = conn3.model(
   })
 );
 
+//registring and putting information in database
+//regirecting to the instructions page
 app.post("/sign_up", (req, res) => {
   var name = req.body.name;
   var email = req.body.email;
@@ -59,26 +61,28 @@ app.post("/sign_up", (req, res) => {
   var password = req.body.password;
 
   var data = {
-    name: name,
+    name : name ,
     email: email,
     phno: phno,
     password: password,
   };
-
   conn.collection("users").insertOne(data, (err, collection) => {
     if (err) {
       throw err;
     }
+    console.log(data)
     console.log("Record Inserted Successfully");
   });
 
   return res.redirect("instructions.html");
 });
+
+//Redircting to exam page
 app.post("/terms", upload.single("uploaded_file"), (req, res) => {
-  // console.log(req.file, req.body)
   return res.redirect("signup_success.html");
 });
-
+//All the required information getting stored in database
+//regirecting to the thank you page
 app.post("/done", (req, res) => {
   var ans1 = req.body.ans1;
   var ans2 = req.body.ans2;
@@ -95,7 +99,6 @@ app.post("/done", (req, res) => {
     ans5: ans5,
     NoOfAlert: NoOfAlert,
   };
-  console.log(req.body);
   conn3.collection("users").insertOne(data, (err, collection) => {
     if (err) {
       throw err;
@@ -105,8 +108,8 @@ app.post("/done", (req, res) => {
 
   return res.redirect("finish.html");
 });
-app
-  .get("/", (req, res) => {
+
+app.get("/", (req, res) => {
     res.set({
       "Allow-access-Allow-Origin": "*",
     });
