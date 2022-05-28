@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Question Paper</title>
+  <link  rel="stylesheet" type="text/css" href="signup.css" >
+  <!-- Face API -->
+  <script defer src="face-api.min.js"></script>
+  <!-- Implementation of API -->
+  <script defer src="script.js"></script>
+</head>
+<body >
+    <div id="countdown">Time left 1:00:00</div>
+<br>
+
+<br><br>
+<div class="box box2">
+    <form action="/done" class="formm" id="myForm" name="myForm" method="POST">
+<!-- Questions -->
+        <p><label class="h1" for="ques">Question 1 What are global variables? How are these variable declared?</label></p>
+  <textarea id="ans1" name="ans1" rows="4" cols="100" style="resize:none"  placeholder="Answer should be between 100-150 words"></textarea>
+  <br>
+  <p><label class="h1" for="ques">Question 2 Which is faster between JavaScript and an ASP script?</label></p>
+  <textarea class="" id="ans2" name="ans2" rows="4" cols="100" style="resize:none" placeholder="Answer should be between 100-150 words"></textarea>
+  <br>
+  <p><label class="h1" for="ques">Question 3 How to define an anonymous function?</label></p>
+  <textarea id="ans1" name="ans3" rows="4" cols="100"style="resize:none"  placeholder="Answer should be between 100-150 words"></textarea>
+  <br>
+  <p><label class="h1" for="ques">Question 4 What is the working of timers in JavaScript?</label></p>
+  <textarea id="ans1" name="ans4" rows="4" cols="100" style="resize:none" placeholder="Answer should be between 100-150 words"></textarea>
+  <br>
+  <p><label class="h1" for="ques">Question 5 Why is javascript called Richer Interface?</label></p>
+  <textarea id="ans1" name="ans5" rows="4" cols="100" style="resize:none" placeholder="Answer should be between 100-150 words"></textarea>
+  <br>
+  <br>
+  <p style="visibility:hidden" ><label class="h1" for="ques"></label></p>
+  <textarea style="visibility:hidden" id="ok" name="NoOfAlert" rows="0" cols="0" style="resize:none" placeholder="Answer should be between 100-150 words"></textarea>
+  
+
+       
+</div>  
+
+<div class="box box1">
+   <!-- video -->
+  <video id="video" width=100% height="250" align="left" autoplay muted>
+    <canvas></canvas>
+  </video>
+
+</div>
+<div id="buttonsub"><button id="buttonsubs" ><input type="submit" value="SUBMIT"  /></button></div>
+</form>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="instructions.css">
+    <script src="image.js"></script>
+    <title>Instructions</title>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="box">
+            
+            <div id="login">
+              <br>
+              <div class="preview lm">
+              <div id="compo1"> <h3 style="font-family: 'Courier New', Courier, monospace ; text-align: center;">Upload Image</h2> </div>
+                <form action="/terms" enctype="multipart/form-data"  method="POST">
+                <img id="file-ip-1-preview">
+                <label for="file-ip-1"></label>
+                <input type="file" id="file-ip-1" required accept="image/*" onchange="showPreview(event);" name="uploaded_file">
+             
+              <div id="compo4"><button id="but"><input type="submit" value="SUBMIT" id="submit" /></button></div>
+              </form>
+              </div>
+            </div>
+              <div id="login">
+                <br>
+                <div class="infocontain">
+                    <div class="info">
+                        <b>Instructions</b>
+                      <p class="instruction_para">
+                        • Make sure you are in a well lit area, and your face is properly visible.
+                      </p>
+                      <p class="instruction_para">
+                        • Do not attempt to reload or change tabs. You will be logged out.
+                      </p>
+                      <p class="instruction_para">
+                        • Do not wear cap, scarf, goggles/sunglasses, headphones, earphones.
+                      </p>
+                      <p class="instruction_para">
+                        • Do not attempt to hide your face during the test.
+                      </p>
+                      <p class="instruction_para">
+                        • Ensure that no one is sitting with you during the entire duration of the test
+                      </p>
+    
+                    </div>
+                     
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>
